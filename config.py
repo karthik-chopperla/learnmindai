@@ -1,3 +1,9 @@
+# learnmindai/config.py
+
+# Set default number of quiz questions
+DEFAULT_QUIZ_LENGTH = 10
+
+# Supported topics
 TOPICS = [
     "Mathematics",
     "Artificial Intelligence",
@@ -5,8 +11,7 @@ TOPICS = [
     "Soft Skills"
 ]
 
-DEFAULT_QUIZ_LENGTH = 5
-
+# Feedback message pools
 POSITIVE_FEEDBACK = [
     "Great job!",
     "Well done!",
