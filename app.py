@@ -74,12 +74,16 @@ elif st.session_state.topic:
         plot_score_chart(username)
 
         st.markdown("### 🧠 Memory Prediction")
-        st.write(predict_memory_decay(
-            username,
-            st.session_state.topic,
-            st.session_state.score,
-            len(st.session_state.quiz)
-        ))
+        try:
+            result = predict_memory_decay(
+                username,
+                st.session_state.topic,
+                st.session_state.score,
+                len(st.session_state.quiz)
+            )
+            st.write(result)
+        except Exception as e:
+            st.error(f"❗ Error in memory prediction: {e}")
 
         st.markdown("### 📌 Study Plan")
         st.write(generate_study_plan(username))
